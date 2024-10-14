@@ -1,0 +1,158 @@
+    1  exit
+    2  exit
+    3  exit
+    4  compaudit
+    5  exit
+    6  compaudit
+    7  ls -alht /usr/local/share/zsh/site-functions/_brew
+    8  ls -alht ../../../Homebrew/completions/zsh/_brew
+    9  exit
+   10  ls
+   11  wchihc onda
+   12  which conda
+   13  which mamba
+   14  cd bin
+   15  ls
+   16  ls -alg
+   17  ./conda
+   18  ls ./bin/micromamba
+   19  ls
+   20  cd 
+   21  which conda
+   22  conda
+   23  which micromamba
+   24  vi .zshrc
+   25  exit
+   26  ls /Users/pfb2024/Downloads
+   27  ls /Users/pfb2024/Downloads
+   28  which python
+   29  which python3
+   30  cd /bin/
+   31  ls
+   32  ls -l
+   33  ls -lt
+   34  ls -lt | head
+   35  man sleep
+   36  date ; sleep 2 ; date
+   37  cd ~
+   38  curl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/cuffdiff.txt
+   39  ls
+   40  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   41  ls
+   42  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   43  cat fav_chr_cuffdiff.txt | tail -5
+   44  tail -5 fav_chr_cuffdiff.txt
+   45  cat blablabla.txt
+   46  cat blablabla.txt 2> errors.txt
+   47  ls
+   48  cat errors.txt
+   49  cat blablabla.txt > errors.txt
+   50  ls
+   51  cat errors.txt
+   52  # just print it to the terminal first\ncat fav_chr_cuffdiff.txt blablabla.file\n\n# redirect to two files, STDOUT to out.txt, STDERR to err.txt \ncat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt\n\n# this does the same, do you see the difference?\ncat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt\n\n
+   53  ls
+   54  cat fav_chr_cuffdiff.txt blablabla.file
+   55  ls
+   56  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt 
+   57  pwd
+   58  cd ..
+   59  ls
+   60  ls -F
+   61  mkdir PFB_problemsets
+   62  cd ~
+   63  mkdir PFB_problemsets
+   64  cd PFB_problemsets
+   65  ls
+   66  pwd
+   67  curl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/sequences.nt.fa
+   68  ls -l
+   69  wc sequences.nt.fa
+   70  head -1 sequences.nt.fa
+   71  tail -3 sequences.nt.fa
+   72  man grep
+   73  grep > sequences.nt.fa| wc
+   74  grep > sequences.nt.fa
+   75  grep '>' sequences.nt.fa | wc -l
+   76  grep > sequences.nt.fa
+   77  cat sequences.nt.fa
+   78  rm sequences.nt.fa
+   79  curl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/sequences.nt.fa
+   80  ls
+   81  grep '>' sequences.nt.fa | wc -l
+   82  cat sequences.nt.fa
+   83  mv sequences.nt.fa > cancer_genes.fasta
+   84  ls
+   85  curl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/cuffdiff.txt
+   86  ls
+   87  head -3 cuffdiff.txt
+   88  sort -h
+   89  ls
+   90  cd PFB_problemsets
+   91  ls
+   92  cd files
+   93  ls
+   94  rm cancer_genes.fasta
+   95  ls
+   96  cd ..
+   97  ls
+   98  git status
+   99  git commit -a
+  100  git commit --help
+  101  git commit -a -m 'General Sync for Unix02 Step 15'
+  102  ls
+  103  cd fastas
+  104  ls
+  105  git status
+  106  cd ..
+  107  git status
+  108  ls
+  109  git add -A fastas
+  110  git status
+  111  git commit -m 'Unix02 Problem Set Step 15 Sync'
+  112  cd ..
+  113  ls
+  114  cd PFB_problemsets
+  115  ls
+  116  git push origin main
+  117  ls
+  118  vi oops
+  119  ls
+  120  git add oops
+  121  git commit -m 'oops is poops'
+  122  git push origin main
+  123  git rm oops
+  124  git commit -m 'removing oops'
+  125  git push
+  126  ls
+  127  vi oops2
+  128  ls
+  129  git add oops2
+  130  git commit -m 'add opps2'
+  131  git push origin main
+  132  ls
+  133  rm oops2
+  134  ls
+  135  git add oops2
+  136  git commit -m 'removed opps2'
+  137  git status
+  138  git push
+  139  ls
+  140  vi never
+  141  git add never
+  142  git status
+  143  git reset never
+  144  git status
+  145  man rm
+  146  man cp
+  147  echo history
+  148  history
+  149  history > unixBasics.history.txt
+  150  ls
+  151  vi unixBasics.history.txt
+  152  ls
+  153  history
+  154  echo $HISTSIZE
+  155  history
+  156  man history
+  157  history -154
+  158  history -all
