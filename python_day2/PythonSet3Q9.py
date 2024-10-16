@@ -15,4 +15,5 @@ dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAG
 
 print(f'ATs make up {(int(dna.upper().count('A'))+int(dna.upper().count('T')))/len(dna.upper()):.1%} of the bases in {dna}.')
 
+print(f'CGs make up {(int(dna.upper().count('C'))+int(dna.upper().count('G')))/len(dna.upper()):.1%} of the bases in {dna}.')
 
