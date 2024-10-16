@@ -1,0 +1,33 @@
+>>> fav_list = ['gaming', 'sleep', 'concerts', 'weightlifting', 'my people']
+>>> print(fav_list)
+['gaming', 'sleep', 'concerts', 'weightlifting', 'my people']
+>>> print(fav_list[2]) #to print middle element
+concerts
+>>> fav_list[2] = 'raves'
+>>> print(fav_list[2]) #to print middle element
+raves
+>>> fav_list.append('campari')
+>>> print(fav_list)
+['gaming', 'sleep', 'raves', 'weightlifting', 'my people', 'campari']
+>>> fav_list.insert(0,'being cozy')
+>>> print(fav_list)
+['being cozy', 'gaming', 'sleep', 'raves', 'weightlifting', 'my people', 'campari']
+>>> fav_list.insert(4,'lights')
+>>> print(fav_list)
+['being cozy', 'gaming', 'sleep', 'raves', 'lights', 'weightlifting', 'my people', 'campari']
+>>> fav_list.pop()
+'campari'
+>>> print(fav_list)
+['being cozy', 'gaming', 'sleep', 'raves', 'lights', 'weightlifting', 'my people']
+>>> fav_list.pop(0)
+'being cozy'
+>>> print(fav_list)
+['gaming', 'sleep', 'raves', 'lights', 'weightlifting', 'my people']
+>>> fav_list.remove('lights')
+>>> print(fav_list)
+['gaming', 'sleep', 'raves', 'weightlifting', 'my people']
+>>> s = ','
+>>> string_of_list_by_comma = s.join(fav_list)
+>>> print(string_of_list_by_comma)
+gaming,sleep,raves,weightlifting,my people
+
