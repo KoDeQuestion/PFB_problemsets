@@ -13,3 +13,8 @@ dna.upper().count('A')
 dna.upper().count('T')
 dna.upper().count('G')
 dna.upper().count('C')
+
+print(f'There are {dna.upper().count('A')} As in {dna}.')
+print(f'There are {dna.upper().count('T')} Ts in {dna}.')
+print(f'There are {dna.upper().count('G')} Gs in {dna}.')
+print(f'There are {dna.upper().count('C')} Cs in {dna}.')
