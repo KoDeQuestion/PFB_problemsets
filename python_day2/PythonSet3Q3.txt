@@ -1,0 +1,17 @@
+>>> my_list = ['a','bb','ccc']
+>>> copy_list = my_list
+>>> print(my_list)
+['a', 'bb', 'ccc']
+>>> copy_list.append('dddd')
+>>> print(my_list)
+['a', 'bb', 'ccc', 'dddd']
+>>> mylist2 = ['a','bb','ccc']
+>>> copylist2 = mylist2.copy()
+>>> print(mylist2)
+['a', 'bb', 'ccc']
+>>> copylist2.append('dddd')
+>>> print(mylist2)
+['a', 'bb', 'ccc']
+>>> print(copylist2)
+['a', 'bb', 'ccc', 'dddd']
+
