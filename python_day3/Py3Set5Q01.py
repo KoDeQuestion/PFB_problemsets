@@ -74,5 +74,8 @@ fav_dic[ask2] = ask3
 
 for thing in fav_dic:
     print(f'{thing:10} \t {fav_dic[thing]}')
-
-
+print('\n')
+##Extra:
+capitalized_dic = {key.capitalize(): value for key, value in fav_dic.items()}
+for thing in capitalized_dic:
+    print(f'{thing:10} \t {capitalized_dic[thing]}')
