@@ -33,3 +33,8 @@ stm_set.remove('Gene stable ID')
 
 
 print(f'The genes that are both stem cell proliferation genes and transcription factor genes are: {tf_set & stm_set}')
+
+##Do it all in command line:
+# sort <file1> > <sorted_file1>
+# sort <file2> > <sorted_file2>
+# comm -12 <sorted_file1> <sorted_file2> 
