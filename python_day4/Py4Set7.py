@@ -146,5 +146,43 @@ print(replaced)
 #Take: AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
 #Turn: ["AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT"]
 
-for match in re.finditer((r"(.*)\^(.*)\^"), replaced):
-    print("Frag:", match.group(2))
+# for match in re.finditer((r"(.*)\^(.*)\^"), replaced):
+#     print("Frag:", match.group(2))
+print(type(replaced))
+frag_list = replaced.split('^')
+print(frag_list)
+
+#I want the length of every [index] in frag list
+#or just to sort based on the length of each index.
+
+sorted(frag_list, key=len)
+
+print(f'The fragments sorted by length: {sorted(frag_list, key=len)}')
+
+##Q9: Download this file: ftp://ftp.neb.com/pub/rebase/bionet.txt or
+# download from our github. This file is contains a list of enzymes and 
+# their cut sites. Create a script that reads this file to fill a
+# dictionary with the enzymes paired with their recognition patterns. 
+#Skip the top 10 header lines and be aware of how the columns are delimited. 
+# You'll modify this script in the next question. 
+
+import re
+enz_dic = {}
+line_count = 0
+with open("bionet.txt","r") as Q9R:
+    for line in Q9R:
+        line = line.rstrip()
+        if line_count < 10:
+            line_count += 1
+        # else:
+        #     for match in re.finditer(r'(\w.*)\s*(\w.*)\n', line):
+        #         enz_dic[match.group(1)] = match.group(2)
+        else:
+            #line_split = line.split(r'         ') #THERE ARE NO TABS line_split = line.split(r'\s{2,}')
+            line_split = re.split(r'\s{2,}', line)
+            enz_dic[line_split[0]] = line_split[-1]
+
+print(line_split)
+print(enz_dic)
+
+#There is an empty empty line at the bottom of the file.
