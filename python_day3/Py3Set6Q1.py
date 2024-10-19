@@ -210,3 +210,5 @@ with open("ferret_transcriptionFactors.tsv","r") as RS104:
         line = line.rstrip() #remove the \n from the end of each line
         tf_set.add(line)
 tf_set.remove('Gene stable ID')
+
+print(f'The genes that are both stem cell proliferation genes and transcription factor genes are: {tf_set & stm_set}')
