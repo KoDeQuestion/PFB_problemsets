@@ -186,3 +186,81 @@ print(line_split)
 print(enz_dic)
 
 #There is an empty empty line at the bottom of the file.
+#MY CODE DOESN'T TAKE INTO ACCOUNT THAT THERE ARE MULTIPLE LINES WITH THE SAME
+#ENZYME NAME - SO THE KEYS IN THE DICTIONARY WOULD BE OVERWRITTEN!!! THIS CAN BE MANAGED:
+
+            # def create_enzyme_dict(filename):
+
+            #     enzyme_file = open(filename, 'r')
+
+            #     enzyme_dict = {}
+            #     with enzyme_file as f:
+            #         for line in enzyme_file:
+            #         # discard lines that do not have a cut site specified
+            #             if "^" in line:
+            #                 line = line.rstrip()
+            #                 matches = re.match(r'(.+?)\s{3,}(.+)', line)
+            #                 # some enzymes have more than one site in file
+            #                 # so we make a list
+
+            #                 # if there is no list of patterns yet, make one
+            #                 try:
+            #                     len(enzyme_dict[matches.group(1)]) 
+            #                 except KeyError: #SEE THIS SOLUTION
+            #                     enzyme_dict[matches.group(1)] = []
+            #                 enzyme_dict[matches.group(1)].append(matches.group(2))
+
+            #     return(enzyme_dict)
+
+
+
+##Q10: Modify your last script to take two command line arguments: 
+#the name of an enzyme and a fasta file with a sequence to be cut. 
+#Load a dictionary of enzyme names and cut sites from the code you developed 
+#in question 9. If the enzyme is present in the dictionary, and can cut the sequence,
+# print out:
+# the sequence, annotated with cut sites
+# the number of fragments
+# the fragments in their natural order (unsorted)
+# the fragments in sorted order (largest to smallest)
+
+#Import name of enzyme, import fasta file
+import sys
+EnzName = sys.argv[1]
+FastaFile = sys.argv[2]
+EnzName_Present = EnzName in enz_dic
+#enz_dic still exists from Q9
+#First: Check enz_dic for key that matches EnzName:
+if enz_dic[EnzName] in enz_dic is False:
+    print(f'The enzyme is not in the dictionary.')
+elif enz_dic[EnzName] in enz_dic is True:
+    cut_site = enz_dic[EnzName]
+
+#Second: Fasta Parser
+gene10 ={}
+gene_hd = 'x'
+with open(sys,argv[2],"r") as Q10R:
+    for line in Q10R:
+        #split based on the tab deliminator
+        line = line.rstrip() #remove the \n from the end of each line
+        #If it has > it's a header
+        if line.startswith(">"): ###FOR THE FIRST TIME
+        #if line.find(">"): THIS WAS ALWAYS TRUE, WHEN NOT FOUND
+        #-1 IS STILL TRUE.
+            gene_hd = line
+            gene10[line] = ''
+        else:
+            gene10[gene_hd] += line #+= to append! Not Overwrite!
+
+#print(f'fastaDict = {gene10}')
+#Now that the FASTA is parsed, we want to sub the VALUE in gene10 by the VALUE in
+# enz_dic
+for gene_hd in gene10:
+    replaced = re.sub(r"([AG])AATT([CT])",r"\1^AATT\2", gene10[gene_hd])
+    print(f'Editted {gene_hd}: {replaced}')
+#Load Dictionary of enzyme names + cut sites
+#Check if the SeqName matches Dictionary Key
+#If SeqName matches Dictionary Key, take Value (Cut Site),
+#and split Seq "string" and print it out.
+
+##Too many variables.
