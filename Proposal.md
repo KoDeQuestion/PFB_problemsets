@@ -32,7 +32,7 @@ Alternatively, we could allow students to submitted files to be parsed and also 
 A ranked list of labs based on matched attributes factoring in the weighted importance to the student. Ideally with plots explaining how a given user arrived at their results.
 Preferably generate a web page for results that shows plots of the matchings. Example alignment heatmap for a given attribute (labs could be arranged in the quadrants based on matches)
 
-![Example Alignment Heatmap](https://www.researchgate.net/profile/Noel-Malod-Dognin/publication/316241039/figure/fig1/AS:616384237146118@1523968862475/Relationships-between-alignment-scores-The-heat-map-presents-the-agreements-between-the.png)
+![Example Alignment Heatmap](Relationships-between-alignment-scores-The-heat-map-presents-the-agreements-between-the.png)
 
 
 #### Potential challenges that may be encountered
